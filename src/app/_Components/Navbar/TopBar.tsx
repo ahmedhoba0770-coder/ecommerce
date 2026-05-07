@@ -4,15 +4,14 @@ import { IoGift } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import Link from 'next/link';
-import { FaUser } from "react-icons/fa";
-import { FaUserPlus } from "react-icons/fa";
+import TopBarAuth from "./TopBarAuth"
 
 
 
 
 export default function TopBar() {
   return (
-    <div className='container mx-auto px-4 bg-black'>
+    <div className='mx-auto px-4 bg-black'>
         <div className='flex justify-between items-center h-8'>
             <div className='flex items-center gap-6 text-gray-300'>
                 <div className='flex items-center gap-2'>
@@ -36,16 +35,7 @@ export default function TopBar() {
                     </a>
                 </div>
                 <span className='w-px h-4 bg-gray-500'></span>
-                <div className='flex items-center gap-4'>
-                    <Link href={"/login"} className='flex items-center gap-1.5 text-gray-300 hover:text-stone-200 transition-colors'>
-                        <FaUser className='size-3'/>
-                        <span>Sign In</span>
-                    </Link>
-                    <Link href={"/register"} className='flex items-center gap-1.5 text-gray-300 hover:text-stone-200 transition-colors'>
-                        <FaUserPlus />
-                        <span>Sign Up</span>
-                    </Link>
-                </div>
+                <TopBarAuth />  
             </div>
         </div>
     </div>
